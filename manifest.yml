@@ -1,0 +1,10 @@
+applications:
+  - name: ren-dpod-planning-svc
+    path: target/ren-dpod-planning-svc-0.0.1-SNAPSHOT.jar
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git#v3.7
+    memory: 1024M
+    stack: cflinuxfs2
+    env:
+      SPRING_PROFILES_DEFAULT: cloud
+services:
+      - ren-dpod-planning-postgres
